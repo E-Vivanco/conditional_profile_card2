@@ -30,15 +30,16 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
   let nombre = variables.name === null ? "Lucy" : variables.name;
   let apellido = variables.lastname === null ? "Boilett" : variables.lastname;
-  let profesion = variables.role === null ? "Web Developer" : variables.role;
-  let ciudad = variables.city === null ? "Miami" : variables.city;
-  let pais = variables.country === null ? "USA" : variables.country;
-  if (variables.socialMediaPosition == null) {
+  /*if (variables.socialMediaPosition == null) {
     variables.socialMediaPosition = "position-left";
   }
   if (variables.socialMediaPosition == true) {
     variables.socialMediaPosition = "position-right";
-  }
+  }*/
+  let profesion = variables.role === null ? "Web Developer" : variables.role;
+  let ciudad = variables.city === null ? "Miami" : variables.city;
+  let pais = variables.country === null ? "USA" : variables.country;
+
   //agregaremos los iconos
   /*let position_right = document.getElementsByClassName("position-right");
   position_right[0].getElementsByTagName("li");
@@ -48,10 +49,10 @@ function render(variables = {}) {
   let icono_l = variables.linkedin === null ? "" : variables.linkedin;
   let icono_i = variables.instagram === null ? "" : variables.instagram;
   //cambiar posicion de la barra de los iconos
-  /*let barra =
+  let barra =
     variables.socialMediaPosition === null
       ? "position-right"
-      : variables.socialMediaPosition;*/
+      : variables.socialMediaPosition;
   //reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -59,7 +60,7 @@ function render(variables = {}) {
           <h1>${nombre} ${apellido}</h1>
           <h2>${profesion}</h2>
           <h3>${ciudad}, ${pais}</h3>
-          <ul class="position-right">
+          <ul class="${barra}">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a>${icono_t}</li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a>${icono_g}</li>
             <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a>${icono_l}</li>
