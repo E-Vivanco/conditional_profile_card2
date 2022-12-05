@@ -34,6 +34,9 @@ function render(variables = {}) {
   let ciudad = variables.city === null ? "Miami" : variables.city;
   let pais = variables.country === null ? "USA" : variables.country;
   //agregaremos los iconos
+  /*let position_right = document.getElementsByClassName("position-right");
+  position_right[0].getElementsByTagName("li");
+  position_right[0].appendChild(<i class="fab fa-twitter"></i>);*/
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
