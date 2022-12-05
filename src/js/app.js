@@ -46,7 +46,7 @@ function render(variables = {}) {
     variables.socialMediaPosition === null
       ? "position-right"
       : variables.socialMediaPosition;*/
-  // reset the website body with the new html output
+  //reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
