@@ -34,8 +34,6 @@ function render(variables = {}) {
   let ciudad = variables.city === null ? "Miami" : variables.city;
   let pais = variables.country === null ? "USA" : variables.country;
   //agregaremos los iconos
-  let list = document.getElementsByTagName("li");
-  list[0];
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
