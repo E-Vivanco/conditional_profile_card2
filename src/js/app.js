@@ -36,7 +36,11 @@ function render(variables = {}) {
   //agregaremos los iconos
   /*let position_right = document.getElementsByClassName("position-right");
   position_right[0].getElementsByTagName("li");
-  position_right[0].appendChild(<i class="fab fa-twitter"></i>);*/
+  position_right[0].appendChild("Twitter");*/
+  let icono_t = variables.twitter === null ? " " : variables.twitter;
+  let icono_g = variables.github === null ? " " : variables.github;
+  let icono_l = variables.linkedin === null ? " " : variables.linkedin;
+  let icono_i = variables.instagram === null ? " " : variables.instagram;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -45,10 +49,10 @@ function render(variables = {}) {
           <h2>${profesion}</h2>
           <h3>${ciudad}, ${pais}</h3>
           <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a>${icono_t}</li>
+            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a>${icono_g}</li>
+            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a>${icono_l}</li>
+            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a>${icono_i}</li>
           </ul>
         </div>
     `;
@@ -69,7 +73,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
