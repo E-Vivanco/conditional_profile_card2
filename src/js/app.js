@@ -53,7 +53,7 @@ function render(variables = {}) {
           <h1>${nombre} ${apellido}</h1>
           <h2>${profesion}</h2>
           <h3>${ciudad}, ${pais}</h3>
-          <ul class="position-right">
+          <ul class="position-left">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a>${icono_t}</li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a>${icono_g}</li>
             <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a>${icono_l}</li>
